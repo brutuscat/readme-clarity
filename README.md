@@ -57,6 +57,10 @@ mv TEMPLATE.md README.md
 
 Then edit. The sections you don't need, delete. The placeholders, fill in. Don't add sections "for completeness", empty sections are noise.
 
+## More
+
+Part of a catalog of single-file browser tools and plain-language references, all MIT licensed and dependency-free: [0xelitesystem.github.io](https://0xelitesystem.github.io/). Built by [elitesystem.ai](https://elitesystem.ai).
+
 ## License
 
 MIT for the template files. Apply whatever license fits your project to the README you generate.
