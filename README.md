@@ -30,6 +30,24 @@ That means:
 
 It is not tied to open source projects or to one template. It can be used for libraries, CLIs, applications, services, internal repositories, monorepos, infrastructure, prototypes, data or ML projects, plugins, and documentation repositories.
 
+## Install and use in Codex
+
+Clone this repository, then copy the skill into Codex's personal skills directory:
+
+```sh
+git clone https://github.com/brutuscat/readme-clarity.git
+mkdir -p ~/.agents/skills
+cp -R readme-clarity/readme-clarity ~/.agents/skills/
+```
+
+Then invoke it in Codex with a README request:
+
+```text
+$readme-clarity Rewrite this repository's README for a first-time user.
+```
+
+Codex discovers personal skills in `~/.agents/skills`. If it does not appear, restart Codex. See the [Codex skills guide](https://developers.openai.com/codex/build-skills) for other installation options.
+
 ## Human-first checks
 
 For every section:

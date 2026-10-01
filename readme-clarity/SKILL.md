@@ -164,7 +164,7 @@ If not, simplify again.
 
 ## Output
 
-When asked to create or rewrite a README, return the finished README by default.
+When asked to create or rewrite a README, update the applicable `README.md` when a writable repository is available. Return the full Markdown if no writable repository is available or the user explicitly requests it; otherwise, summarize the change.
 
 When asked to review one, show the problem, why it matters to the reader, and the smallest useful correction. Do not produce a mechanical style audit unless requested.
 
