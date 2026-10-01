@@ -8,7 +8,7 @@ The goal is not to copy the "after" layouts. The goal is to identify what a huma
 
 ### Before
 
-```markdown
+````markdown
 # parse-date-pro
 
 The next-generation date parsing solution for modern applications.
@@ -25,7 +25,7 @@ The next-generation date parsing solution for modern applications.
 ## Installation
 
 npm install parse-date-pro
-```
+````
 
 ### Problem
 
@@ -33,7 +33,7 @@ The reader gets adjectives before behavior. There is no example, no indication o
 
 ### After
 
-```markdown
+````markdown
 # parse-date-pro
 
 Parse a small set of human-readable date strings into JavaScript `Date` objects.
@@ -50,7 +50,7 @@ parseDate("2027-01-15");
 ```
 
 It supports ISO dates and the relative expressions documented in [SUPPORTED.md](docs/SUPPORTED.md). It does not attempt natural-language parsing beyond that set.
-```
+````
 
 ### Why it changed
 
@@ -62,7 +62,7 @@ The example demonstrates more than the feature list. The limit matters because t
 
 ### Before
 
-```markdown
+````markdown
 # pricing-service
 
 The Pricing Service is a scalable enterprise-grade microservice leveraging Kafka, PostgreSQL, Redis, Kubernetes, REST, event-driven architecture, and cloud-native design patterns.
@@ -77,7 +77,7 @@ The Pricing Service is a scalable enterprise-grade microservice leveraging Kafka
 - Kubernetes
 - Helm
 - Prometheus
-```
+````
 
 ### Problem
 
@@ -85,7 +85,7 @@ The opening is mostly technology keywords. A new engineer still does not know wh
 
 ### After
 
-```markdown
+````markdown
 # pricing-service
 
 Calculates the sell price returned by Checkout.
@@ -111,7 +111,7 @@ docker compose up -d postgres kafka
 ```
 
 The service starts on `localhost:8080`. See [docs/configuration.md](docs/configuration.md) for non-default configuration.
-```
+````
 
 ### Why it changed
 
@@ -123,7 +123,7 @@ The system relationship matters more than the technology inventory. A diagram ea
 
 ### Before
 
-```markdown
+````markdown
 # pgvector-benchmark
 
 ## Features
@@ -141,7 +141,7 @@ The system relationship matters more than the technology inventory. A diagram ea
 - Add more datasets
 - Try more dimensions
 - Add charts
-```
+````
 
 ### Problem
 
@@ -149,7 +149,7 @@ A PoC exists to answer a question. The README does not state the question, curre
 
 ### After
 
-```markdown
+````markdown
 # pgvector-benchmark
 
 Tests whether pgvector HNSW can keep p95 nearest-neighbor search below 100 ms for our 5 million-vector workload.
@@ -177,7 +177,7 @@ Results are written to `results/`.
 ## Limits
 
 The benchmark does not model concurrent writes, production network latency, or failover.
-```
+````
 
 ### Why it changed
 
@@ -189,7 +189,7 @@ The README now explains the question, result, reproduction path, and limits. A r
 
 ### Before
 
-```markdown
+````markdown
 # platform
 
 This repository contains all platform components.
@@ -208,7 +208,7 @@ This repository contains all platform components.
 ## Setup
 
 See each package.
-```
+````
 
 ### Problem
 
@@ -216,7 +216,7 @@ The package list does not explain how the repository is organized or what a cont
 
 ### After
 
-```markdown
+````markdown
 # platform
 
 Monorepo for the customer-facing web application and the services that support it.
@@ -243,7 +243,7 @@ pnpm dev
 This starts the web app, API, and local dependencies used for normal feature development.
 
 For service-specific work, follow the README in that service directory.
-```
+````
 
 ### Why it changed
 
@@ -255,7 +255,7 @@ A compact map answers the navigation problem better than an unexplained package 
 
 ### Before
 
-```markdown
+````markdown
 # production-infra
 
 Infrastructure as code.
@@ -270,7 +270,7 @@ Infrastructure as code.
 - S3
 - IAM
 - GitHub Actions
-```
+````
 
 ### Problem
 
@@ -278,7 +278,7 @@ The technologies are visible, but the operational boundary is not. A reader need
 
 ### After
 
-```markdown
+````markdown
 # production-infra
 
 Terraform configuration for the production AWS account.
@@ -305,7 +305,7 @@ terraform plan
 Do not apply production changes from a developer workstation. Production applies run through the protected CI environment.
 
 See [docs/recovery.md](docs/recovery.md) before changing stateful resources.
-```
+````
 
 ### Why it changed
 
