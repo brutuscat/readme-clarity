@@ -46,7 +46,7 @@ Then invoke it in Codex with a README request:
 $readme-clarity Rewrite this repository's README for a first-time user.
 ```
 
-Codex discovers personal skills in `~/.agents/skills`. If it does not appear, restart Codex. See the [Codex skills guide](https://developers.openai.com/codex/build-skills) for other installation options.
+Codex's [skills guide](https://developers.openai.com/codex/skills#where-codex-loads-local-skills) lists `$HOME/.agents/skills` as the user-level discovery directory. Run `/skills` in Codex CLI or the IDE extension to check that `readme-clarity` is listed; if it is missing, restart Codex.
 
 ## Human-first checks
 
