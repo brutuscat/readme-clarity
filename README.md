@@ -1,72 +1,88 @@
-# oss-readme-template
+# readme-clarity
 
-A battle-tested README structure for open source projects. Skip the AI cliches and the empty "Features" section. Use the structure that actually answers what visitors want to know.
+A human-first skill for creating, restructuring, and reviewing repository READMEs.
 
-This repo IS the template. Fork or copy `TEMPLATE.md` into your own project's `README.md` and fill in the sections.
+The goal is simple: make a repository understandable and usable with the minimum necessary documentation.
 
-## What's in the template
+## Core idea
 
-A 12-section structure that handles 95% of OSS repos:
+A README should give a person the shortest verified path from:
 
-1. **Project name** + one-line description (what it is, in plain words)
-2. **The problem** (1-2 sentences, why this exists)
-3. **Quick example** (code or output showing it working)
-4. **Install** (one command if possible)
-5. **Use it** (minimal, runnable usage)
-6. **API / CLI reference** (link to dedicated docs if longer than a screen)
-7. **What it doesn't do** (set expectations honestly)
-8. **Contributing** (link to CONTRIBUTING.md or short note)
-9. **Tech / dependencies** (one line)
-10. **License**
-11. **Related** (companion projects)
-12. **Acknowledgments** (optional)
+`What is this?`
 
-## What's NOT in the template
+to:
 
-Sections to delete or keep minimal because they almost always become slop:
+`I understand whether this matters to me and what to do next.`
 
-- **"Features"** as a bullet list. Show the example instead, it's more convincing.
-- **"Why X?"** marketing comparisons. Say what your tool does well, don't trash competitors.
-- **Animated GIF showing every feature.** One static screenshot is better.
-- **Roadmap** in the README. Use a project board or pinned issue.
-- **Sponsor banner above the title.** Put it at the bottom or in the sidebar.
-- **"Built with love"** badges. Use them sparingly; they're noise.
-- **Long FAQ.** If users keep asking the same thing, fix the docs.
+That means:
+
+- write for humans, not keyword density;
+- keep sections only when they serve a reader outcome;
+- prefer concrete examples over abstract feature claims;
+- move deep reference material out of the README when appropriate;
+- use diagrams when they genuinely reduce cognitive load;
+- delete or condense before adding more prose;
+- never invent commands, capabilities, requirements, benchmarks, or compatibility claims.
+
+## What the skill does
+
+`readme-clarity` inspects the available project context, identifies the likely reader and primary successful action, then selects only the README structure needed for that project.
+
+It is not tied to open source projects or to one template. It can be used for libraries, CLIs, applications, services, internal repositories, monorepos, infrastructure, prototypes, data or ML projects, plugins, and documentation repositories.
+
+## Install and use in Codex
+
+Clone this repository, then copy the skill into Codex's personal skills directory:
+
+```sh
+git clone https://github.com/brutuscat/readme-clarity.git
+mkdir -p ~/.agents/skills
+cp -R readme-clarity/readme-clarity ~/.agents/skills/
+```
+
+Then invoke it in Codex with a README request:
+
+```text
+$readme-clarity Rewrite this repository's README for a first-time user.
+```
+
+Codex's [skills guide](https://developers.openai.com/codex/skills#where-codex-loads-local-skills) lists `$HOME/.agents/skills` as the user-level discovery directory. Run `/skills` in Codex CLI or the IDE extension to check that `readme-clarity` is listed; if it is missing, restart Codex.
+
+## Human-first checks
+
+For every section:
+
+- What does the reader get from this?
+- Can it be deleted or condensed?
+- Does it belong in the README or in deeper documentation?
+- Would an example explain it faster?
+- Would a Mermaid diagram explain the relationship better?
+
+For every paragraph:
+
+- Would a human understand this?
+- Is it written as normal prose rather than metadata or keyword stuffing?
+- If it is dense, abstract, repetitive, or awkward, can it be expressed more simply?
+
+The skill silently considers multiple simpler formulations when prose needs simplification, while leaving already-clear writing alone.
+
+## Agent Clarity
+
+If [Agent Clarity](https://github.com/brutuscat/agent-clarity) is available, README Clarity can use it selectively as a second pass on operational instructions such as setup, prerequisites, configuration, deployment, validation, and recovery steps.
+
+README Clarity remains responsible for human readability, information architecture, tone, examples, diagrams, and section selection. Agent Clarity is optional; this skill must work fully without it.
 
 ## Files
 
-- [`TEMPLATE.md`](TEMPLATE.md), the README skeleton, ready to copy
-- [`example-filled.md`](example-filled.md), the same template filled out for a fictional project
-- [`CONTRIBUTING.md`](CONTRIBUTING.md), a minimal contributing template
+- [`readme-clarity/SKILL.md`](readme-clarity/SKILL.md) — the skill
+- [`readme-clarity/examples/before-after.md`](readme-clarity/examples/before-after.md) — examples showing different README structures
 
-## Why this exists
+## Origin
 
-Most OSS READMEs fall into two failure modes:
+This project started from [0xelitesystem/oss-readme-template](https://github.com/0xelitesystem/oss-readme-template). Its strongest ideas remain here: plain descriptions, useful examples early, honest limitations, progressive disclosure, and deleting sections that do not earn their place.
 
-1. **The marketing landing page.** Logo, badges, animated GIF, "Why X is the best Y," buy-now button. Makes you suspicious instead of curious.
-2. **The empty stub.** Project name, one sentence, install command, no usage example, no idea what it does.
-
-The middle path is shorter than people think. This template aims for that middle.
-
-## Use it
-
-```bash
-curl -O https://raw.githubusercontent.com/0xelitesystem/oss-readme-template/main/TEMPLATE.md
-mv TEMPLATE.md README.md
-```
-
-Then edit. The sections you don't need, delete. The placeholders, fill in. Don't add sections "for completeness", empty sections are noise.
-
-## More
-
-Part of a catalog of single-file browser tools and plain-language references, all MIT licensed and dependency-free: [0xelitesystem.github.io](https://0xelitesystem.github.io/). Built by [elitesystem.ai](https://elitesystem.ai).
+README Clarity generalizes those ideas beyond OSS and turns them into a human-first documentation skill rather than a fixed template.
 
 ## License
 
-MIT for the template files. Apply whatever license fits your project to the README you generate.
-
-## Related
-
-- [readme-slop-checker](https://github.com/0xelitesystem/readme-slop-checker), audit any README for AI cliches
-- [oss-license-picker](https://github.com/0xelitesystem/oss-license-picker), decide which license to use
-- [solo-saas-launch-checklist](https://github.com/0xelitesystem/solo-saas-launch-checklist), pre-launch checklist
+MIT. See [LICENSE](LICENSE).
